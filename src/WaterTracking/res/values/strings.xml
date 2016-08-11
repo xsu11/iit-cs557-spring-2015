@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Lab2_201_24</string>
+    <string name="action_settings">Settings</string>
+    <string name="pause">Pause</string>
+    <string name="resume">Rsume</string>
+    <string name="stop">Stop</string>
+    <string name="start">Start</string>
+
+</resources>

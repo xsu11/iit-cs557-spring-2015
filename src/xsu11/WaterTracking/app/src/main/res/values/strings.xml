@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">WaterTracking</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="gender">Gender</string>
+    <string name="age">Age</string>
+    <string name="objective">Objective</string>
+    <string name="save">Save</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="reset">Reset</string>
+    <string name="gender_male">Male</string>
+    <string name="gender_female">Female</string>
+    <string name="age_70">60~70</string>
+    <string name="age_60">50~60</string>
+    <string name="age_50">40~50</string>
+    <string name="age_40">30~40</string>
+    <string name="age_30">20~30</string>
+    <string name="age_20">10~20</string>
+    <string name="age_10">0~10</string>
+    <string name="objective_drinking">Drinking</string>
+    <string name="objective_not_drinking">Not Drinking</string>
+</resources>

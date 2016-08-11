@@ -1,0 +1,113 @@
+package ca.uwaterloo.lab2_201_24;
+
+import java.util.Arrays;
+
+import ca.uwaterloo.sensortoy.LineGraphView;
+import android.hardware.Sensor;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+public class MainActivity extends Activity {
+	//Sensor variables
+	public SensorManager sensorManager;
+	public Sensor accelSensor;
+	public SensorEventListener a;
+	public TextView accelOutput;
+	public TextView maxAccelOutput;
+	
+	//Button variables
+	Button button;
+	Button button2;
+	Button button3;
+	
+	//Graph variables
+	LinearLayout ll;
+	LineGraphView graph;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		 //Set up vertical layout
+		 ll = (LinearLayout) findViewById(R.id.label1);
+	     ll.setOrientation(LinearLayout.VERTICAL);
+	     
+	     //Assigning a sensor manger to sensorManager
+	     sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+	     
+	     //Assigning buttons with the tasks: pause, resume, and clear
+	     button = (Button) findViewById(R.id.resetSteps);
+         button.setOnClickListener(new View.OnClickListener() {
+             public void onClick(View v) {
+                ((AccelSensorEventListener) a).zeroSteps();
+             }
+         });
+         
+         button2 = (Button) findViewById(R.id.pause);
+         button2.setOnClickListener(new View.OnClickListener() {
+             public void onClick(View v) {
+               onPause();
+             }
+         });
+
+         button3 = (Button) findViewById(R.id.resume);
+         button3.setOnClickListener(new View.OnClickListener() {
+             public void onClick(View v) {
+               onResume();
+             }
+         });
+         
+		
+		//ACCELEROMETER
+	    accelOutput = new TextView(getApplicationContext());
+	    maxAccelOutput = new TextView(getApplicationContext());
+	    //Creating a action listener
+		a = new AccelSensorEventListener(accelOutput, maxAccelOutput);
+	    accelSensor = sensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION);
+	    sensorManager.registerListener(a, accelSensor, SensorManager.SENSOR_DELAY_FASTEST);
+	    //Adding the accelerometer output to layout
+	    ll.addView(accelOutput);
+	    ll.addView(maxAccelOutput);
+	    //Graphing vectors on the line graph
+	    graph = new LineGraphView(getApplicationContext(),
+	               100,Arrays.asList("x", "y", "z"));
+		    
+		    ((AccelSensorEventListener) a).setGraph(graph);
+		    graph = ((AccelSensorEventListener) a).getUpdatedGraph();
+	        ll.addView(graph);
+	}
+	
+	@Override
+	//This method unregisters the accelerometer
+    public void onPause() {
+
+	    super.onPause();
+
+	    sensorManager.unregisterListener(a, accelSensor);
+	}
+	//This method checks to see if the application is resumed by user,
+	//if it is then the sensors are re-registered (listened to)
+	public void onResume() {
+
+	    super.onResume();
+
+	    sensorManager.registerListener(a, accelSensor,SensorManager.SENSOR_DELAY_FASTEST);
+
+	}
+
+	@Override
+	
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+}

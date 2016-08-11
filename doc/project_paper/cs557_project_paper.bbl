@@ -1,0 +1,65 @@
+\begin{thebibliography}{10}
+
+\bibitem{Thomas}
+David Thomas.
+\newblock Understanding clinical dehydration and its treatment.
+\newblock {\em Journal of the American Medical Directors Association}, page
+  292—301, 2008.
+
+\bibitem{Chickpin}
+Chickpin.
+\newblock Chickpin drinking water application.
+\newblock \url{https://play.google.com/store/apps/details?id=chickpin.water}.
+
+\bibitem{Aqualert}
+Health, Fitness:body water tracker, and reminder.
+\newblock Aqualert drinking water application.
+\newblock
+  \url{https://play.google.com/store/apps/details?id=com.overseasolutions.waterapp.app}.
+
+\bibitem{Weka}
+Weka.
+\newblock Weka.
+\newblock \url{http://www.cs.waikato.ac.nz/~ml/weka/}.
+
+\bibitem{Parate:2014:RRS:2594368.2594379}
+Abhinav Parate, Meng-Chieh Chiu, Chaniel Chadowitz, Deepak Ganesan, and
+  Evangelos Kalogerakis.
+\newblock Risq: Recognizing smoking gestures with inertial sensors on a
+  wristband.
+\newblock In {\em Proceedings of the 12th Annual International Conference on
+  Mobile Systems, Applications, and Services}, MobiSys '14, pages 149--161, New
+  York, NY, USA, 2014. ACM.
+
+\bibitem{androidsensor}
+Google.
+\newblock Android sensor.
+\newblock
+  \url{http://developer.android.com/reference/android/hardware/SensorManager.html}.
+
+\bibitem{LiKamWa:2013:MBM:2462456.2464449}
+Robert LiKamWa, Yunxin Liu, Nicholas~D. Lane, and Lin Zhong.
+\newblock Moodscope: Building a mood sensor from smartphone usage patterns.
+\newblock In {\em Proceeding of the 11th Annual International Conference on
+  Mobile Systems, Applications, and Services}, MobiSys '13, pages 389--402, New
+  York, NY, USA, 2013. ACM.
+
+\bibitem{Jain}
+A.~Jain and D.~Zongker.
+\newblock Feature selection: evaluation, application, and small sample
+  performance.
+\newblock {\em Pattern Analysis and Machine Intelligence, IEEE Transactions
+  on}, 19(2):153–158, Feb 1997.
+
+\bibitem{Korting}
+Thales Korting.
+\newblock C4.5 algorithm and multivariate decision trees.
+\newblock {\em Image Processing Division, National Institute for Space
+  Research}, page 292—301, 2008.
+
+\bibitem{androiddeveloper}
+Google.
+\newblock Android developer.
+\newblock \url{http://developer.android.com/index.html}.
+
+\end{thebibliography}
